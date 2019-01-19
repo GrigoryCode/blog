@@ -1,5 +1,8 @@
-<h2>Homepage<h2>
+<h1>All posts<h1>
 <% @post.each do |post| %>
+  <div class="lead">
   <h2><%= post.title %></h2>
   <p><%= post.body %></p>
+  <%= link_to "Read more", post_path(post), :class => 'text-muted' %>
+  </div>
 <% end %>
